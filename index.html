@@ -4,66 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agnes Lilia | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background: #fff6f8;
+      background: #fff6f9;
       color: #333;
     }
 
-    header {
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffe4e1;
+      padding: 10px 0;
       text-align: center;
-      padding: 60px 20px 30px;
-      background: #fcd5ce;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #444;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e91e63;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe4e1, #fff6f9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #e91e63;
     }
 
     header h1 {
-      font-size: 2.5em;
-      margin: 0;
+      font-size: 3em;
+      margin: 0.3em 0 0.1em;
     }
 
     header p {
-      font-size: 1.1em;
-      margin-top: 10px;
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 1em;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #c2185b;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 80px 20px;
+      max-width: 960px;
       margin: auto;
     }
 
     .projects {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
     }
 
     .card {
-      background: white;
-      border-radius: 20px;
+      background: #fff;
+      border-radius: 15px;
       padding: 20px;
-      width: 280px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      width: 270px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
-    .wave {
-      margin: 0;
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: bold;
     }
 
     footer {
+      background: #ffe4e1;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      background: #fcd5ce;
     }
 
     @media (max-width: 600px) {
@@ -71,40 +130,59 @@
         flex-direction: column;
         align-items: center;
       }
+
+      header h1 {
+        font-size: 2.2em;
+      }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
+    <img src="https://i.postimg.cc/7Z7hq2ZF/avatar-demo.jpg" alt="Agnes Lilia" />
     <h1>Agnes Lilia Shybu</h1>
-    <p>Junior Developer | App Creator | Dreamer 🌸</p>
+    <p>Junior Developer | Dreamer | Creator ✨</p>
+    <a class="btn" href="resume.pdf" download>Download Resume</a>
   </header>
 
-  <svg class="wave" viewBox="0 0 1440 320">
-    <path fill="#fff6f8" fill-opacity="1" d="M0,64L1440,224L1440,0L0,0Z"></path>
-  </svg>
-
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Yumify App</h3>
-        <p>A recipe generator app that uses AI to suggest meals based on selected ingredients. Built using Java, Android Studio, PHP, and MySQL.</p>
-      </div>
-      <!-- Add more cards here if needed -->
-    </div>
-  </section>
-
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm a passionate and curious junior developer who's always excited to learn and build! Right now, I'm exploring mobile and web development, and looking forward to working on real-world projects where I can grow and contribute.
+      Hi! I'm Agnes, a creative and passionate developer from Dubai with a love for building apps and websites that are clean, user-friendly, and meaningful. I built Yumify — an AI-powered recipe generator app — and I’m always learning and growing. Right now, I’m working on leveling up my skills and exploring new technologies. I'm excited to work on real-world projects where I can contribute, grow, and shine 🌟.
     </p>
   </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Yumify</h3>
+        <p>
+          Yumify is an AI-powered recipe generator app developed using Java (Android Studio), PHP, and MySQL. Users can discover and save recipes, explore chef-uploaded content, and buy premium items. It’s designed to reduce food waste and bring joy to cooking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect and create something beautiful!</p>
+    <div class="socials">
+      <a href="mailto:agnes@example.com">Email</a> |
+      <a href="https://www.linkedin.com/in/agneslilia">LinkedIn</a> |
+      <a href="https://github.com/agnesshybu">GitHub</a>
+    </div>
+  </section>
+
   <footer>
-    © 2025 Agnes Lilia | Built with 💗 by me!
+    © 2025 Agnes Lilia | Made with 💗 in Dubai
   </footer>
 
 </body>
