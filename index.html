@@ -2,98 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agnes Shybu | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agnes Lilia | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #222;
+      font-family: 'Quicksand', sans-serif;
+      background: #fff6f8;
+      color: #333;
     }
+
     header {
-      background-color: #f5f5f5;
-      padding: 60px 20px;
       text-align: center;
+      padding: 60px 20px 30px;
+      background: #fcd5ce;
     }
+
     header h1 {
-      font-size: 48px;
+      font-size: 2.5em;
       margin: 0;
     }
+
     header p {
-      font-size: 18px;
-      color: #666;
+      font-size: 1.1em;
+      margin-top: 10px;
     }
-    nav {
-      background-color: #fff;
-      padding: 10px 20px;
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      border-bottom: 1px solid #ddd;
     }
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-    section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-    .project-card {
-      border: 1px solid #eee;
-      border-radius: 8px;
+
+    .card {
+      background: white;
+      border-radius: 20px;
       padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      width: 280px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .wave {
+      margin: 0;
+    }
+
     footer {
       text-align: center;
-      padding: 30px;
-      background-color: #f5f5f5;
-      font-size: 14px;
-      color: #888;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #fcd5ce;
+    }
+
+    @media (max-width: 600px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header id="home">
-    <h1>Agnes Shybu</h1>
-    <p>App Developer | Tech Enthusiast | UI/UX Learner</p>
+  <header>
+    <h1>Agnes Lilia Shybu</h1>
+    <p>Junior Developer | App Creator | Dreamer 🌸</p>
   </header>
 
-  <section id="projects">
+  <svg class="wave" viewBox="0 0 1440 320">
+    <path fill="#fff6f8" fill-opacity="1" d="M0,64L1440,224L1440,0L0,0Z"></path>
+  </svg>
+
+  <section>
     <h2>Projects</h2>
-    <div class="project-card">
-      <h3>🍽 Yumify – Smart Recipe App</h3>
-      <p>An AI-powered recipe generator that suggests dishes based on selected ingredients. Built using Java, Android Studio, PHP, and MySQL.</p>
+    <div class="projects">
+      <div class="card">
+        <h3>Yumify App</h3>
+        <p>A recipe generator app that uses AI to suggest meals based on selected ingredients. Built using Java, Android Studio, PHP, and MySQL.</p>
+      </div>
+      <!-- Add more cards here if needed -->
     </div>
-    <!-- Add more project cards here -->
   </section>
 
-  <section id="about">
+  <section>
     <h2>About Me</h2>
-    <p>I'm passionate about tech, building apps, and creating meaningful digital experiences. I love solving problems and am always exploring new tools and ideas.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 agnes@example.com</p>
-    <p>📍 Dubai, UAE</p>
+    <p>
+      I'm a passionate and curious junior developer who's always excited to learn and build! Right now, I'm exploring mobile and web development, and looking forward to working on real-world projects where I can grow and contribute.
+    </p>
   </section>
 
   <footer>
-    &copy; 2025 Agnes Shybu. All rights reserved.
+    © 2025 Agnes Lilia | Built with 💗 by me!
   </footer>
 
 </body>
